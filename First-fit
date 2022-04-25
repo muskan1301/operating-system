@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    
+    int block_size[]= {8,16,8,32,4};
+    int pr_size[] = {15,27,7,5,7};
+    int total_blocks = sizeof(block_size)/sizeof(block_size[0]);
+    int total_process = sizeof(pr_size)/sizeof(pr_size[0]);
+    int temp[total_process],temp1[total_blocks];
+    for(int i=0;i<total_process;i++){
+        for(int j=0;j<total_blocks;j++){
+            if(temp[i]==i || temp1[j]==j){
+                continue;
+            }
+            if(pr_size[i]<=block_size[j]){
+                cout<<"Block size: "<<block_size[j]<<"\t"<<"Process no.: "<<i<<endl;
+                temp[i] = i;
+                temp1[j] = j;
+            }
+            else{
+                cout<<""
+            }
+        }
+    }
+   
+}
